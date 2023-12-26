@@ -1,20 +1,37 @@
 #include<iostream>
+
 using namespace std;
-int main()
-{
-	int rate1, rate2, units, bill;
-	rate1=5;
-	rate2=10;
-	cout<<"enter units consumed by cient:"<<endl;
-	cin>>units;
-	if(units<250)
+int main() {
+	int a ,b ;
+
+	cout << "Enter the Value of A" << endl;
+	cin >> a;
+
+	cout << "Enter the Value of B" <<endl;
+	cin >> b;
+
+	char op;
+	cout<< "Enter the Operation You want to perform"<<endl;
+	cin >>op;
+
+	switch (op)
 	{
-		bill=units*rate1;
-		cout<<"totoal bill is"<<bill<<endl;
+	case '+': cout << (a+b) <<endl;
+	break;
+	case '-': cout << (a-b) <<endl;
+	break;
+	
+	case '*': cout << (a*b) <<endl;
+	break;
+
+	case '/': cout << (a/b) <<endl;
+	break;
+
+	case '%': cout << (a%b) <<endl;
+	break;
+	
+	default:
+		cout << "Please enter a Valid Operation" <<endl;
 	}
-	else
-	{
-		bill=units*rate2;
-		cout<<"totoal bill is"<<bill<<endl;
-	}
+	return 0;
 }
